@@ -15,11 +15,12 @@ export default async function Home() {
     redirect("/sign-in");
   }
 
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
 
-      <h2>Welcome!</h2>
-      <code className="highlight">{user.role}</code>
+
+  return (
+    <main className="min-h-screen ">
+
+      <h1>Hi, {user.email}</h1>
       <Link className="button" href="/profile">
         
         Go to Profile
