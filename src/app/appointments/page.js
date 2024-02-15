@@ -2,6 +2,9 @@ import Link from "next/link";
 import React from "react";
 
 export default function Appointments() {
+
+  
+
   return (
     <div className="px-8">
       <div className="grid grid-cols-2 gap-3">
@@ -10,14 +13,12 @@ export default function Appointments() {
             <h1 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               Appointments
             </h1>
-            <button
-              type="button"
-              className="text-white bg-primary hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-primary dark:hover:bg-blue-800 dark:focus:ring-blue-800"
-            >
-                <Link href="/appointments/new">
+          
+                <Link href="/appointments/new" className="text-white bg-primary hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-primary dark:hover:bg-blue-800 dark:focus:ring-blue-800"
+>
               New type of service
               </Link>
-            </button>
+           
           </div>
           <span className="text-gray-500 text-sm font-normal">
             <p>Try not to miss meetings, and if you do,</p>
