@@ -12,17 +12,14 @@ export default async function page() {
   .from('services')
   .select('*')
           
-//   console.log('bookings',{bookings});
-  console.log(services.length)
 
   return (
-    <div className="px-5 lg:flex w-full justify-center ">
-      <div className="bg-white rounded-lg p-4 mb-3 lg:mb-0">
-        <h2 className="font-medium text-lg mb-3 text-gray-900">Calendar</h2>
-        <h5 className="font-bold text-2xl tracking-tight leading-8 text-gray-900">
+    <div className="px-5  w-full">
+      <div  className="flex items-center space-x-2 mb-3 ">
+        <p className=" tracking-tight leading-6 ">
           Monday, February 12th, 2024
-        </h5>
-        <p className="text-lg leading-6 text-gray-600 mt-3 font-medium">
+        </p>
+        <p className="leading-6  ">
           0 appointments
         </p>
       </div>

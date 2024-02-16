@@ -5,15 +5,15 @@ import React from "react";
 
 export function ServiceList({ services }) {
   return (
-    <div className="mt-4 border border-gray-300 rounded-lg divide-y ">
+    <div className="mt-4 border border-gray-300 rounded-lg divide-y dark:border-[#c1c1c35a] dark:divide-[#c1c1c35a] ">
       {services.map((service) => (
         <div
           key={service.id}
           className=" p-2 md:flex items-center justify-between"
         >
-          <div className="flex space-x-1 items-center pb-2.5 mt-1 ">
+          <div className="flex space-x-1 tracking-tight items-center  pb-2.5 mt-1 ">
             <p className="text-sm font-normal">{service.name}</p>
-            <span className="text-sm font-normal">
+            <span className="text-sm font-normal ">
               ({service.duration} minutes @ {service.price})
             </span>
           </div>
@@ -109,57 +109,15 @@ export default async function Appointments() {
   console.log({ services });
   return (
     <div className="px-8">
-      <div className="grid grid-cols-2 gap-3">
-        <div className="bg-white rounded-lg border border-gray-300 p-4">
-          <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Appointments
-            </h1>
-
-            <Link
-              href="/appointments/new"
-              className="text-white bg-primary hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-primary dark:hover:bg-blue-800 dark:focus:ring-blue-800"
-            >
-              New type of service
-            </Link>
-          </div>
-          <span className="text-gray-500 text-sm font-normal">
-            <p>Try not to miss meetings, and if you do,</p>
-            <p>warn your clients. Create meaningful and </p>
-            <p> predictable relationships with your clients.</p>
-          </span>
-
-          <div className="inline-flex mt-8 w-full gap-4 rounded-md shadow-sm">
-            <Link
-              href="/appointments"
-              aria-current="page"
-              className="px-4 py-2 w-full text-sm text-center font-medium text-primary bg-white border border-primary rounded-lg hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-primary focus:text-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
-            >
-              Services
-            </Link>
-            <Link
-              href="#"
-              className="px-4 py-2 w-full text-center text-sm font-medium text-gray-900 bg-white rounded-lg border  border-gray-200 hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-2 focus:ring-primary focus:text-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
-            >
-              Add ons
-            </Link>
-            <Link
-              href="#"
-              className="px-4 py-2 w-full text-center text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-2 focus:ring-primary focus:text-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
-            >
-              Coupons
-            </Link>
-          </div>
-        </div>
-      </div>
+    
 
       <div className="mt-4">
-        <h5 className="font-semibold text-lg">Appointment Types</h5>
-        <p className="text-sm text-gray-400">
+        <h5 className="font-medium">Appointment Types</h5>
+        <p className="text-sm tracking-tight text-slate-500 dark:text-slate-400">
           Create appointments to share for people to book on your calendar.
         </p>
 
-        {services ? (
+        {!services ? (
           <div className="flex justify-center items-center min-h-80">
             <h1 className="font-medium text-lg text-gray-500">No services available yet!</h1>
           </div>

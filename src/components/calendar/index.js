@@ -28,7 +28,7 @@ export const EventCalendar = ({
       )
     
   return (
-    <div className=" min-h-[500px] h-auto rounded  w-full bg-white p-4">
+    <div className=" min-h-screen h-screen rounded  w-full">
     <Calendar
     //   components={components}
       defaultDate={defaultDate}
