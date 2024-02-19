@@ -19,6 +19,7 @@
     "next": "^13.4.8",
     "react": "^18",
     "react-big-calendar": "^1.10.0",
+    "react-datepicker": "^6.1.0",
     "react-dom": "^18",
     "react-toastify": "^10.0.4",
     "uuid": "^9.0.1",

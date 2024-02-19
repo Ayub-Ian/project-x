@@ -1,10 +1,11 @@
 import { Inter } from "next/font/google";
-import "../styles/globals.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import 'react-big-calendar/lib/sass/styles'; Need to install sass support
+import "react-datepicker/dist/react-datepicker.css";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import Link from "next/link";
+import "../styles/globals.css";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
