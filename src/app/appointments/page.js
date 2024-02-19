@@ -112,11 +112,16 @@ export default async function Appointments() {
     
 
       <div className="mt-4">
+        <div className="flex items-center justify-between">
+        <div>
         <h5 className="font-medium">Appointment Types</h5>
         <p className="text-sm tracking-tight text-slate-500 dark:text-slate-400">
           Create appointments to share for people to book on your calendar.
         </p>
+        </div>
 
+        <Link href="/appointments/new/" className="text-sm bg-primary rounded px-4 py-2">New appointment type</Link>
+        </div>
         {!services ? (
           <div className="flex justify-center items-center min-h-80">
             <h1 className="font-medium text-lg text-gray-500">No services available yet!</h1>

@@ -93,7 +93,7 @@ export default function RootLayout({ children }) {
                   
                   <li>
                     <Link
-                      href="#"
+                      href="/appointments/"
                       className="flex items-center w-full p-2  transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:hover:text-white  dark:hover:bg-gray-700"
                     >
                       Appointment types

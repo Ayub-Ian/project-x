@@ -13,12 +13,12 @@ export default async function CreateService() {
   return (
     <div className="px-8 md:flex justify-center">
       <div className="max-w-2xl space-y-2 w-full">
-        <div className="bg-white p-4 rounded-lg">
+        <div className=" p-4 rounded-lg">
           <p>Back</p>
           <h5 className="font-bold text-2xl tracking-tight uppercase">New type of service</h5>
         </div>
 
-        <section className="bg-white dark:blue-900 rounded-lg">
+        <section className="dark:blue-900 rounded-lg">
   <div className=" px-4 mx-auto max-w-2xl py-4 ">
     <CreateServiceForm user={user} />
   </div>
