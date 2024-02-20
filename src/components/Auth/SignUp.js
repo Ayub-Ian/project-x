@@ -14,9 +14,10 @@ const getCharacterValidationError = (str) => {
 };
 
 const SignUpSchema = Yup.object().shape({
-  email: Yup.string().email("Invalid email").required("Required"),
+  fullname: Yup.string().required("Field is required"),
+  email: Yup.string().email("Invalid email").required("Field is required"),
   password: Yup.string()
-    .required("Required")
+    .required("Field is required")
     .min(8, "Password must have at least 8 characters")
     .matches(/[0-9]/, getCharacterValidationError("digit"))
     .matches(/[a-z]/, getCharacterValidationError("lowercase"))
@@ -36,6 +37,10 @@ const SignUp = () => {
       password: formData.password,
       options: {
         emailRedirectTo: `${location.origin}/auth/callback`,
+        data: {
+          email: formData.email, 
+          name: formData.fullname
+        }
       },
     });
 
@@ -60,6 +65,7 @@ const SignUp = () => {
       <h2 className="w-full text-center">Create Account</h2>
       <Formik
         initialValues={{
+          fullname: "",
           email: "",
           password: "",
         }}
@@ -68,6 +74,23 @@ const SignUp = () => {
       >
         {({ errors, touched }) => (
           <Form className="column w-full">
+                        <label
+              htmlFor="email"
+              className="block text-sm font-medium leading-6"
+            >
+              Full Name
+            </label>
+            <Field
+              className={cn("text-gray-900", errors.email && "bg-red-50")}
+              id="fullname"
+              name="fullname"
+              placeholder="fullname"
+              type="email"
+            />
+            {errors.fullname && touched.fullname ? (
+              <div className="text-red-600">{errors.fullname}</div>
+            ) : null}
+
             <label
               htmlFor="email"
               className="block text-sm font-medium leading-6"
