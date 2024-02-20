@@ -9,7 +9,7 @@ export default function DatePick(props) {
     const [startDate, setStartDate] = useState(new Date());
 
   return (
-    <div className='w-full'>
+    <div className='min-w-full'>
     
       <DatePicker
       className='datepicker'
