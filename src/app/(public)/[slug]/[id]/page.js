@@ -81,7 +81,7 @@ function BookingPage() {
               </div>
         
           </div>
-          <div className="mt-auto md:max-w-[460px] px-5 py-3 h-full">
+          <div className="mt-auto md:max-w-[560px] px-5 py-3 h-full">
             <DatePick />
           </div>
           <div className="flex flex-col md:max-w-[280px] px-5 py-3 items-start h-full min-w-full">
