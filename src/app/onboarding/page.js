@@ -13,19 +13,7 @@ export default function Onboarding() {
   const searchParams = useSearchParams()
   const type = searchParams.get('type')
 
-  console.log({type})
-
-  const formData = {
-    username: '',
-    timezone: '',
-    availability: [
-      {
-        day_of_week: "",
-        start_time: "",
-        end_time: ""
-      }
-    ]
-  }
+ 
   
 
   return (
